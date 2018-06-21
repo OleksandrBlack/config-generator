@@ -1,8 +1,8 @@
 <html lang="en">
   <head>
-    <title>Config Generator | myHush.org</title>
+    <title>Config Generator | Komodo.Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="https://myhush.org/favicon.ico">
+    <link rel="shortcut icon" href="https://komodo.services/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css'>
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,700'>
@@ -15,7 +15,7 @@
         <div class="logo">
           <img src="logo.jpg" />
         </div>
-        <h1>Hush Config Generator</h1>
+        <h1>Komodo Config Generator</h1>
         <h4>Select your platform</h4>
         <ul id="platform">
           <li><button class="button-white button-outline" v-on:click="setPlatform('Linux')">Linux</button></li>
@@ -25,7 +25,7 @@
       </div>
       <div id="build" class="content text-center">
         <h3>Let's build your config</h3>
-        <h5>Update your settings on the left. Your <code class="dark">.conf</code> will update on the right.</h5>
+        <h5>Update your settings on the left. Your <code class="dark">komodo.conf</code> will update on the right.</h5>
         <div class="row">
           <div class="column">
             <form class="center">
@@ -34,7 +34,7 @@
                 <div class="row">
                   <div class="column">
                     <h5>General</h5>
-                    <p>Customize general Hush settings
+                    <p>Customize general Komodo settings
                     <ul class="toggles">
                       <li>
                         <label>Enable Daemon</label>
@@ -90,7 +90,7 @@
                       </li>
                     </ul>
                     <h5>Paths</h5>
-                    <p>Customize Hush data paths</p>
+                    <p>Customize Komodo data paths</p>
                     <label>Change Path?</label>
                     <label class="switch">
                       <input type="checkbox" v-model="customPath" v-on:click="showPathInput">
@@ -100,6 +100,14 @@
                       <label>Blockchain Path</label>
                       <input class="input" type="url" v-model="optionDataDir" style="border-color: #2d2d2d;">
                     </li>
+                    
+                    <h5 style="margin-top: 15px;">Addnode</h5>
+                    <p>Connect to trusted Komodo nodes. Remove by clicking.</p>
+                    <input style="border-color: #2d2d2d;" type="text" placeholder="Enter a ip address and hit enter" v-model="tempAddnode" @keyup.enter="addAddnode(tempAddnode)">
+                    <ul class="whitelist" v-for="item in optionAddnode" v-bind:item="item">
+                      <li v-on:click="removeAddnodeItem(item)">{{ item }}</li>
+                    </ul>
+                    
                     <h5 style="margin-top: 15px;">Whitelist</h5>
                     <p>Add trusted bootstrap nodes. Remove by clicking.</p>
                     <input style="border-color: #2d2d2d;" type="text" placeholder="Enter a ip address and hit enter" v-model="tempWhitelist" @keyup.enter="addWhiteList(tempWhitelist)">
@@ -114,7 +122,7 @@
           </div>
           <div class="column">
             <div class="platform-banner animated fadeInDown">
-              You have selected <span class="bold">{{ platform }}</span> as your platform. Please place <code class="light">hush.conf</code> in the below path:
+              You have selected <span class="bold">{{ platform }}</span> as your platform. Please place <code class="light">komodo.conf</code> in the below path:
               <div class="path">{{ path }}</div>
             </div>
 
@@ -122,10 +130,18 @@
             </div>
           </div>
         </div>
+        <br></br>
+        <div class="row donate2">
+          <div class="column">
+            Modified for Komodo by <a href="https://komodo.services">komodo.services</a><br />
+            <span><i>KMD - (TO_DO)</i></span>
+          </div>
+          <br></br>
+        </div>
         <div class="row donate">
           <div class="column">
-            Developed by <a href="https://forum.myhush.org/u/mreichardt/activity">@mreichardt</a><br />
-            <span><i>t1NdPHBDTE4fgcFmW85bq7qpg486Hakm4W5</i></span>
+            Developed for Hush by <a href="https://forum.myhush.org/u/mreichardt/activity">@mreichardt</a><br />
+            <span><i>Hush - t1NdPHBDTE4fgcFmW85bq7qpg486Hakm4W5</i></span>
           </div>
         </div>
       </div>
