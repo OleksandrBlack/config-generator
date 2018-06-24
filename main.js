@@ -5,12 +5,12 @@ new Vue({
         path: '',
         conf: '',
         peersList: [
-          'explorer.myhush.org',
-          'stilgar.leto.net',
-          'dnsseed.myhush.org',
-          'dnsseed2.myhush.org',
-          'dnsseed.bleuzero.com',
-          'dnsseed.hush.quebec'            
+          '5.9.102.210',
+          '63.141.241.74',
+          '142.54.164.114',
+          '104.236.244.215',
+          '142.54.162.50',
+          '69.30.201.26'            
         ],
         optionDaemon: 1,
         optionServer: 1,
