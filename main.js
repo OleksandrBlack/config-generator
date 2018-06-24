@@ -97,7 +97,7 @@ new Vue({
                 + currentdate.getMinutes() + ":"
                 + currentdate.getSeconds()
           this.conf =
-            "# KMD Configuaration File<br /><br /># Made by Komodo Config Generator, at: " + compileTime + "<br /><br /># The rpcpassword was randomly set.<br /><br /># Make sure your config file is saved as komodo.conf and not komodo.conf.txt<br /><br />daemon=" + this.optionDaemon + "<br />server=" + this.optionServer + "<br />rpcallowip=" + this.optionRpcAllowIp + "<br />rpcuser=" + this.optionRpcUser + "<br />rpcpassword=" + this.optionRpcPassword
+            "# Komodod Configuaration File<br /><br /># Made by Komodo Config Generator, on: " + compileTime + ". The rpcpassword was randomly set.<br /><br /># Make sure your config file is saved as komodo.conf and not komodo.conf.txt<br /><br />daemon=" + this.optionDaemon + "<br />server=" + this.optionServer + "<br />rpcallowip=" + this.optionRpcAllowIp + "<br />rpcuser=" + this.optionRpcUser + "<br />rpcpassword=" + this.optionRpcPassword
           if (this.optionAddnode.length != 0) {
             this.conf = this.conf + "<br /><br />addnode=" + this.optionAddnode
           }
