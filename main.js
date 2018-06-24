@@ -123,7 +123,7 @@ new Vue({
             this.conf = this.conf + "<br />addnode=" + this.peersList[i]
           }
           if (this.optionTor == 1) {
-            this.conf = this.conf + "<br />addnode=(need a tor node)"
+            this.conf = this.conf + "<br />addnode= at3atd7ttssqn6fe.onion" + "<br />addnode= fvnszn5y3beukzho.onion" + "<br />addnode= lk34oel3ealx4ouv.onion" + "<br />addnode= 3kas2bh4qvymvmqq.onion" + "<br />addnode= mac65kd6gtnuvls5.onion" + "<br />addnode= rwdn747lu5casqaw.onion"
           }
           $('#profile').show()
         }
