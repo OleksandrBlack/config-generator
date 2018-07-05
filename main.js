@@ -123,7 +123,7 @@ new Vue({
             this.conf = this.conf + "<br />addnode=" + this.peersList[i]
           }
           if (this.optionTor == 1) {
-            this.conf = this.conf + "<br />addnode=at3atd7ttssqn6fe.onion" + "<br />addnode=fvnszn5y3beukzho.onion" + "<br />addnode=lk34oel3ealx4ouv.onion" + "<br />addnode=3kas2bh4qvymvmqq.onion" + "<br />addnode=mac65kd6gtnuvls5.onion" + "<br />addnode=rwdn747lu5casqaw.onion"
+            this.conf = this.conf + "<br />addnode=hwdkehdke2u62u7a.onion" + "<br />addnode=jsyh3w5huo4j5x6y.onion" + "<br />addnode=sncc4su7phf4hc3h.onion" + "<br />addnode=4shay2omzoretwtz.onion" + "<br />addnode=j66xfe5u43pww3e4.onion" + "<br />addnode=zglsemlpr2ddvgm2.onion" + "<br />addnode=onoj652tqwlf662f.onion" + "<br />addnode=wqajno7lufuo5a54.onion" + "<br />addnode=3t2vybqwit5ntprf.onion"
           }
           $('#profile').show()
         }
