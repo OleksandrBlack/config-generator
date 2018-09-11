@@ -2,7 +2,7 @@
   <head>
     <title>Config Generator | Komodo Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="https://komodo.services/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css'>
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,700'>
@@ -70,6 +70,34 @@
                         <label>Enable Mining</label>
                         <label class="switch">
                           <input type="checkbox" v-model="optionGen" v-on:click="showMinerInfo">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+		      <li>
+                        <label>Enable TX Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionTxindex">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+		      <li>
+                        <label>Enable Address Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionAddressindex">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+		      <li>
+                        <label>Enable Spent Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionSpentindex">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+		      <li>
+                        <label>Enable Timestamp Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionTimestampindex">
                           <div class="slider round"></div>
                         </label>
                       </li>

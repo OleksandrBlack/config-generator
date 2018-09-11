@@ -28,7 +28,11 @@ new Vue({
         optionRpcUser: 'rpcuser',
         optionRpcPassword: Math.random().toString(36).slice(2),
         optionShowMetrics: 0,
-        optionDataDir: ''
+        optionDataDir: '',
+	optionTxindex: 0,
+	optionAddressindex: 0,
+	optionSpentindex: 0,
+	optionTimestampindex: 0
     },
     methods: {
         setPlatform: function (option) {
@@ -115,6 +119,18 @@ new Vue({
           }
           if (this.optionShowMetrics == 1) {
             this.conf = this.conf + "<br /><br />showmetrics=1"
+          }
+	  if (this.optionTxindex == 1) {
+            this.conf = this.conf + "<br /><br />txindex=1"
+          }
+	  if (this.optionAddressindex == 1) {
+            this.conf = this.conf + "<br />addressindex=1"
+          }
+	  if (this.optionSpentindex == 1) {
+            this.conf = this.conf + "<br />spentindex=1"
+          }
+	  if (this.optionTimestampindex == 1) {
+            this.conf = this.conf + "<br />timestampindex=1"
           }
           for (var i = 0; i< this.peersList.length; i++) {
             if (i == 0) {
