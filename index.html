@@ -73,6 +73,24 @@
                           <div class="slider round"></div>
                         </label>
                       </li>
+                      <li class="animated fadeInRight" id="minerAddress" v-on:click="showMinerAddress">
+                        <label>Specific Address</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="customMinerToAddress" v-on:click="showMinerAddress">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li class="animated fadeInLeft" id="threads" style="clear: left;">
+                        <label>CPU Threads</label>
+                        <span class="thread-count" v-on:click="decreaseThreads"><</span>
+                        <input class="input" type="text" v-model="optionGenProcLimit" style="max-width: 40px; text-align: center;">
+                        <span class="thread-count" v-on:click="increaseThreads">></span>
+                      </li>
+                      <li class="animated fadeInRight" id="minerInput" style="border-color: #2d2d2d;">
+                        <label>Transparent Address</label>
+                        <input class="input" type="text" v-model="optionMinerAddress" style="border-color: #2d2d2d;">
+                      </li>
+
 		      <li>
                         <label>Enable TX Index</label>
                         <label class="switch">
@@ -100,23 +118,6 @@
                           <input type="checkbox" v-model="optionTimestampindex">
                           <div class="slider round"></div>
                         </label>
-                      </li>
-                      <li class="animated fadeInRight" id="minerAddress" v-on:click="showMinerAddress">
-                        <label>Specific Address</label>
-                        <label class="switch">
-                          <input type="checkbox" v-model="customMinerToAddress" v-on:click="showMinerAddress">
-                          <div class="slider round"></div>
-                        </label>
-                      </li>
-                      <li class="animated fadeInLeft" id="threads" style="clear: left;">
-                        <label>CPU Threads</label>
-                        <span class="thread-count" v-on:click="decreaseThreads"><</span>
-                        <input class="input" type="text" v-model="optionGenProcLimit" style="max-width: 40px; text-align: center;">
-                        <span class="thread-count" v-on:click="increaseThreads">></span>
-                      </li>
-                      <li class="animated fadeInRight" id="minerInput" style="border-color: #2d2d2d;">
-                        <label>Transparent Address</label>
-                        <input class="input" type="text" v-model="optionMinerAddress" style="border-color: #2d2d2d;">
                       </li>
                     </ul>
                     <h5>Paths</h5>
