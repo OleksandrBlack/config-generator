@@ -16,8 +16,18 @@ body {
 }
 
 .button-dark {
-  background-color: #2d2d2d;
-  border-color: #2d2d2d;
+  background-color: #00475f;
+  border-color: #08b6f1;
+}
+
+.button-dark:hover {
+  background-color: #047ea7;
+  border-color: #08b6f1;
+}
+
+.button-dark:focus {
+  background-color: #08b6f1;
+  border-color: #08b6f1;
 }
 
 .button-white.button-clear,
@@ -26,8 +36,16 @@ body {
   color: white;
 }
 
+.button-white.button-outline:focus {
+  background-color: #00475f;
+  border-color: #08b6f1;
+  color: white;
+}
+
+
 .button-white.button-outline:hover {
-  background-color: transparent;
+  background-color: #00475f;
+  border-color: #08b6f1;
   color: white;
 }
 
@@ -36,17 +54,17 @@ body {
 }
 
 code.dark {
-  background-color: #2d2d2d;
+  background-color: #00698c;
   color: #fff;
 }
 
 code.light {
-  color: #2d2d2d;
+  color: #00698c;
 }
 
 .jumbo {
   padding: 20px 20px 75px 20px;
-  background-color: #2d2d2d;
+  background-color: #025571;
   color: #ffffff;
 }
 
@@ -72,7 +90,7 @@ code.light {
 .content {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 50px 50px 50px 50px;
+  padding: 10px 0px 50px 0px;
 }
 .content form {
   text-align: left;
@@ -92,7 +110,10 @@ code.light {
 .content .toggles li {
   float: left;
   display: inline;
-  margin: 0px 10px 20px 0px;
+  margin: 0px 70px 20px 0px;
+}
+label, legend {
+ font-size:14px;
 }
 .content .toggles #threads {
   display: none;
@@ -131,7 +152,7 @@ code.light {
   width: 75%;
   margin: 25px auto;
   padding: 10px;
-  background: #333;
+  background: #00475f;
   color: #fff;
   border-radius: 5px;
 }
@@ -165,7 +186,7 @@ code.light {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #d6f0f9;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -183,11 +204,11 @@ code.light {
 }
 
 input:checked + .slider {
-  background-color: #2d2d2d;
+  background-color: #00698c;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2d2d2d;
+  box-shadow: 0 0 1px #00698c;
 }
 
 input:checked + .slider:before {
@@ -220,7 +241,7 @@ input:checked + .slider:before {
   margin: 0px 5px -15px 5px;
   padding: 3px 10px 3px 10px;
   border-radius: 5px;
-  background: #2d2d2d;
+  background: #00698c;
   color: #FFF;
 }
 
@@ -262,7 +283,7 @@ input {
 .tooltip span {
   position: absolute;
   width:140px;
-  color: #2D2D2D;
+  color: #00698c;
   background: #FFF;
   height: 40px;
   line-height: 40px;
